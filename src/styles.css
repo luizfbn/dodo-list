@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Delius&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --type: "Delius", sans-serif;
+  --color-p1: #e8a631;
+  --color-p2: #ffeed0;
+  --color-s1: #78a3ad;
+  --color-c1: #bdbdbd;
+  --color-c2: #424242;
+  --color-c3: #212121;
+  --color-bg: #ffeed0;
+  --color-type: #212121;
+}
+
+:root .dark-theme {
+  --color-bg: #212121;
+  --color-type: #ffeed0;
+}
+
+body {
+  margin: 0;
+  font-family: var(--type);
+  background-color: var(--color-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
