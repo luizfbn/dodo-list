@@ -1,0 +1,10 @@
+<form
+  class="task-input"
+  [formGroup]="taskInputForm"
+  (ngSubmit)="handleSubmit()"
+>
+  <input type="text" formControlName="task" placeholder="Adicione sua tarefa" />
+  <button type="submit" [disabled]="!taskInputForm.valid">
+    <img src="assets/add.svg" alt="Adicionar tarefa" width="16" height="16" />
+  </button>
+</form>

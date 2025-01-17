@@ -1,0 +1,52 @@
+.task-input {
+  position: relative;
+}
+
+.task-input input {
+  font-family: var(--type);
+  color: var(--color-type);
+  background-color: var(--color-bg);
+  height: 40px;
+  border: 1px solid var(--color-s1);
+  padding: 0.875rem 3.7rem 0.875rem 1.25rem;
+  border-radius: 1.25rem;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.task-input input::placeholder {
+  color: #8e8e8e;
+  opacity: 1;
+}
+
+.task-input input:focus,
+.task-input input:hover {
+  outline: none;
+  color: var(--color-c3);
+  border-color: var(--color-p1);
+  background: #fff;
+}
+
+.task-input button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-p1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.task-input button:disabled {
+  cursor: initial;
+}
+
+.task-input button:not(:disabled):hover {
+  transform: scale(1.05);
+}
