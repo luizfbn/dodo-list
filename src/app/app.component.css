@@ -1,0 +1,53 @@
+.main {
+  max-width: 60rem;
+  padding: 1.5rem 1.25rem;
+  margin: 0 auto;
+}
+
+task-input {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1;
+  top: 8px;
+  width: 100%;
+}
+
+.separator {
+  display: block;
+  margin: 2.5rem auto;
+}
+
+.list {
+  display: grid;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.tasks > li {
+  margin-bottom: 0.5rem;
+}
+
+.tasks > li:only-child,
+.tasks > li:last-child {
+  margin-bottom: 0;
+}
+
+.not-found {
+  color: var(--color-type);
+  text-align: center;
+}
+
+.fadeIn {
+  animation: animeRightToLeft 0.5s forwards;
+}
+
+@keyframes animeRightToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}

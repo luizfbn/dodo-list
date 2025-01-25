@@ -1,27 +1,37 @@
 <main class="main">
-  <header class="header">
-    <button>Switch mode</button>
-    <figure>
-      <img src="assets/logo.svg" alt="Dodo list Logo" />
-    </figure>
-  </header>
-  <section>
-    <form class="input">
-      <input type="text" placeholder="Adicione sua tarefa" />
-      <button type="submit">Adicionar</button>
-    </form>
-    <hr class="separator" />
+  <app-header class="fadeIn"></app-header>
+  <section class="fadeIn">
+    <task-input (onSubmit)="addTask($event)"></task-input>
+    <img
+      src="assets/wave.svg"
+      alt="Separator"
+      class="separator"
+      width="92"
+      height="10"
+    />
     <section class="list">
-      <ul class="filter">
-        <li>Todas</li>
-        <li>Abertas</li>
-        <li>Concluídas</li>
+      @if (tasks.length > 0) {
+      <task-filter (onClick)="filterTasks($event)" [tasks]="tasks" />
+      @let filteredTasks = tasks | taskStatusFilter: filterStatus;
+      <ul class="tasks">
+        @for (task of filteredTasks; track task.id) {
+        <li
+          class="task fadeIn"
+          [task]="task"
+          [id]="$index"
+          (onCheck)="sortTasks()"
+          (onDelete)="removeTask($event)"
+          [@fadeOut]
+        ></li>
+        } @if (!filteredTasks.length) {
+        <li class="fadeIn">
+          <p class="not-found">Nenhuma tarefa encontrada.</p>
+        </li>
+        }
       </ul>
-      <ul class="items">
-        <li>Item 00</li>
-        <li>Item 01</li>
-        <li>Item 02</li>
-      </ul>
+      } @else {
+      <p class="not-found fadeIn">Nenhuma tarefa adicionada.</p>
+      }
     </section>
   </section>
 </main>
