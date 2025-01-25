@@ -1,0 +1,19 @@
+<header class="header">
+  <theme-switch
+    class="toggle-switch"
+    [checked]="themeService.themeSignal() === 'dark'"
+    (onClick)="themeService.updateTheme()"
+  ></theme-switch>
+  <figure>
+    <img
+      [hidden]="themeService.themeSignal() === 'light'"
+      src="assets/logo-dark-mode.svg"
+      alt="Dodo list Logo"
+    />
+    <img
+      [hidden]="themeService.themeSignal() === 'dark'"
+      src="assets/logo.svg"
+      alt="Dodo list Logo"
+    />
+  </figure>
+</header>
