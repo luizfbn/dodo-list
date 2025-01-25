@@ -16,7 +16,12 @@
   --color-type: #212121;
 }
 
-:root .dark-theme {
+[data-theme="light"] {
+  --color-bg: #ffeed0;
+  --color-type: #212121;
+}
+
+[data-theme="dark"] {
   --color-bg: #212121;
   --color-type: #ffeed0;
 }
