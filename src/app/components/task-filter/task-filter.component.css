@@ -1,0 +1,35 @@
+.task-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.task-filter > li:first-child::after {
+  content: "|";
+  color: var(--color-s1);
+  margin-left: 8px;
+}
+
+.task-filter > li a {
+  font-size: 0.75rem;
+  letter-spacing: 0.0075rem;
+  color: var(--color-type);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+.task-filter > li a:hover,
+.task-filter > li a.active {
+  color: var(--color-s1);
+}
+
+.task-filter > li span {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--color-c3);
+  background-color: var(--color-p1);
+  border-radius: 50%;
+  padding: 0.25rem 0.4rem;
+  margin-left: 0.25rem;
+}

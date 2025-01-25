@@ -1,0 +1,29 @@
+<ul class="task-filter">
+  <li>
+    <a
+      href="#"
+      (click)="handleClick($event, TaskStatus.ALL)"
+      [ngClass]="{ active: activeLink === TaskStatus.ALL }"
+      >Todas</a
+    >
+    <span>{{ (tasks | taskStatusFilter : TaskStatus.ALL).length }}</span>
+  </li>
+  <li>
+    <a
+      href="#"
+      (click)="handleClick($event, TaskStatus.TODO)"
+      [ngClass]="{ active: activeLink === TaskStatus.TODO }"
+      >Abertas</a
+    >
+    <span>{{ (tasks | taskStatusFilter : TaskStatus.TODO).length }}</span>
+  </li>
+  <li>
+    <a
+      href="#"
+      (click)="handleClick($event, TaskStatus.DONE)"
+      [ngClass]="{ active: activeLink === TaskStatus.DONE }"
+      >Concluídas</a
+    >
+    <span>{{ (tasks | taskStatusFilter : TaskStatus.DONE).length }}</span>
+  </li>
+</ul>
