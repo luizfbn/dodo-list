@@ -36,6 +36,7 @@
 
 .content-wrapper {
   flex: 1;
+  word-break: break-word;
 }
 
 .checkbox {

@@ -4,6 +4,7 @@
 
 .task-input input {
   font-family: var(--type);
+  font-size: 1rem;
   color: var(--color-type);
   background-color: var(--color-bg);
   height: 40px;
