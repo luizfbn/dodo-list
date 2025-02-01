@@ -34,6 +34,7 @@ task-input {
 .not-found {
   color: var(--color-type);
   text-align: center;
+  margin: 1.5rem 0;
 }
 
 .fadeIn {
