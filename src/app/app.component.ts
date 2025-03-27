@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { HeaderComponent } from './components/header/header.component';
@@ -8,7 +8,6 @@ import { TaskComponent } from './components/task/task.component';
 import { TaskStatusFilterPipe } from './pipes/task-status-filter.pipe';
 import { TaskStatus } from './enums/task-status.enum';
 import { ITask } from './models/task.model';
-import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -32,7 +31,6 @@ import { ThemeService } from './services/theme.service';
   ],
 })
 export class AppComponent implements OnInit {
-  themeService: ThemeService = inject(ThemeService);
   tasks: ITask[] = [];
   filterStatus: TaskStatus = TaskStatus.ALL;
 

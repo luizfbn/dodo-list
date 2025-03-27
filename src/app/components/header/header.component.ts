@@ -9,5 +9,5 @@ import { ThemeSwitchComponent } from '../theme-switch/theme-switch.component';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-  themeService: ThemeService = inject(ThemeService);
+  constructor(public themeService: ThemeService) {}
 }
